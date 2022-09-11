@@ -10,36 +10,47 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <title>WebStudio</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="" class="link-logo" lang="en"><span class="logo">Web</span>Studio</a>
-        <ul class="site-nav list">
-          <li><a class="link current" href="">Студія</a></li>
-          <li><a class="link" href="./portfolio.html">Портфоліо</a></li>
-          <li><a class="link" href="">Контакти</a></li>
+    <header class="page-header">
+      <div class="container header-conteiner">
+        <nav class="navi">
+          <a href="" class="link-logo" lang="en"><span class="logo">Web</span>Studio</a>
+          <ul class="site-nav list">
+            <li class="item"><a class="link current" href="">Студія</a></li>
+            <li class="item"><a class="link" href="./portfolio.html">Портфоліо</a></li>
+            <li class="item"><a class="link" href="">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="contact list">
+          <li class="item">
+            <a
+              class="contact-nav"
+              href="mailto:info@devstudio.com"
+              rel="noopener noreferrer nofollow"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="item">
+            <a class="contact-nav" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
         </ul>
-      </nav>
-      <ul class="contact list">
-        <li>
-          <a class="contact-nav" href="mailto:info@devstudio.com" rel="noopener noreferrer nofollow"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li><a class="contact-nav" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </header>
     <main>
       <!-- head sectlon -->
-      <section class="hero-section">
+      <section class="hero-section container section">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="head-btn">Замовити послугу</button>
       </section>
       <!-- feature section -->
-      <section>
+      <section class="container">
         <h2 class="visually-hidden">Особливості</h2>
         <ul class="list">
           <li>
@@ -67,7 +78,7 @@
         </ul>
       </section>
       <!-- section what we do -->
-      <section>
+      <section class="container">
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="list">
           <li>
@@ -82,7 +93,7 @@
         </ul>
       </section>
       <!-- team section -->
-      <section>
+      <section class="container">
         <h2 class="section-title">Наша команда</h2>
         <ul class="list">
           <li>
@@ -108,7 +119,7 @@
         </ul>
       </section>
     </main>
-    <footer class="footer-section">
+    <footer class="footer-section container">
       <a href="" class="footer-logo" lang="en"><span class="logo">Web</span>Studio</a>
       <address>
         <ul class="list">

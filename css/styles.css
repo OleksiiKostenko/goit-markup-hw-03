@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  outline: 1px solid red;
+}
 :root {
   --text-color-priority: #212121;
   --secondary-color-priority: #757575;
@@ -8,13 +17,32 @@
   --portfolio-btn-color: #f5f4fa;
   --contact-link-color: rgba(255, 255, 255, 0.6);
   --link-logo-color: #000000;
+  --border-color: #ececec;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--text-color-priority);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+/* haeder */
 /* logo */
 .link-logo {
   font-family: 'Raleway';
@@ -23,6 +51,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--link-logo-color);
+  display: block;
+  margin-right: 90px;
 }
 .logo {
   color: var(--active-elements-color);
@@ -31,19 +61,51 @@ body {
 .link-logo:focus {
   color: var(--active-elements-color);
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+}
+.navi {
+  display: flex;
+  align-items: center;
+}
 /* nav-link */
 a {
   text-decoration-line: none;
+}
+.site-nav {
+  display: flex;
+  padding: 0;
+}
+.site-nav .item {
+  margin-right: 50px;
+}
+.site-nav .item:last-child {
+  margin-right: 0;
 }
 
 .link {
   color: var(--text-color-priority);
   font-weight: 500;
   line-height: 1.15;
+  padding: 32px 0;
+  display: block;
 }
 .link:hover,
 .link:focus {
   color: var(--active-elements-color);
+}
+.contact .item {
+  margin-right: 50px;
+}
+.contact .item:last-child {
+  margin-right: 0;
+}
+.contact {
+  display: flex;
+  margin-left: auto;
+  padding-left: 0;
 }
 .contact-nav {
   color: var(--secondary-color-priority);
@@ -136,13 +198,28 @@ a {
 }
 /* portfolio */
 /* hero section */
+.main-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.main-btn .btn-item {
+  margin-left: 10px;
+}
+.btn-item:first-child {
+  margin-left: 0;
+}
 .hero-btn {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
+  border: 0;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 22px;
+  display: inline-block;
   color: var(--text-color-priority);
   background-color: var(--portfolio-btn-color);
 }
@@ -150,6 +227,13 @@ a {
 .hero-btn:focus {
   color: var(--secondary-text-color);
   background-color: var(--active-elements-color);
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-list > .project-item {
+  flex-basis: calc(100% / 3);
 }
 .titles {
   font-weight: 700;
@@ -184,4 +268,9 @@ a {
   font-style: normal;
   line-height: 1.7;
   color: var(--contact-link-color);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }

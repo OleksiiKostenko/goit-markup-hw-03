@@ -5,7 +5,6 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 :root {
   --text-color-priority: #212121;
@@ -18,6 +17,7 @@ html {
   --contact-link-color: rgba(255, 255, 255, 0.6);
   --link-logo-color: #000000;
   --border-color: #ececec;
+  --border-block-color: #eeeeee;
 }
 
 body {
@@ -37,12 +37,10 @@ h6,
 p,
 ul {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.header-conteiner {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--border-color);
-}
+
 /* haeder */
 /* logo */
 .link-logo {
@@ -54,6 +52,16 @@ ul {
   color: var(--link-logo-color);
   display: block;
   margin-right: 90px;
+}
+.hero-wrapp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
 }
 .logo {
   color: var(--active-elements-color);
@@ -130,6 +138,10 @@ a {
 .footer-section {
   background-color: var(--background-color-site);
 }
+.hero-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .hero-title {
   font-style: normal;
   font-weight: 900;
@@ -139,19 +151,26 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  max-width: 696px;
+  margin-top: 200px;
+  margin-bottom: 30px;
 }
 .head-btn {
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
   cursor: pointer;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
   background-color: var(--active-elements-color);
+  margin-bottom: 200px;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 32px;
+  display: block;
 }
 .head-btn:hover,
 .head-btn:focus {
@@ -241,20 +260,24 @@ a {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin: 20px 24px 4px 24px;
 }
 .list-text {
   font-size: 16px;
   line-height: 30px;
   color: var(--secondary-color-priority);
+  margin: 0 24px 20px 24px;
 }
 
 /* footer */
 .footer-logo {
+  display: block;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   color: var(--secondary-text-color);
+  margin: 0 auto 20px auto;
 }
 .footer-logo:hover,
 .footer-logo:focus {
@@ -270,7 +293,16 @@ a {
   line-height: 1.7;
   color: var(--contact-link-color);
 }
-
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-list {
+  margin-bottom: 10px;
+}
+.footer-list:last-child {
+  margin-bottom: 0;
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -291,6 +323,7 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
+  border: 1px solid var(--border-block-color);
 }
 
 .project-item:nth-child(3n) {

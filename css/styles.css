@@ -25,6 +25,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--text-color-priority);
+  background-color: var(--secondary-text-color);
 }
 
 h1,
@@ -232,9 +233,9 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-.project-list > .project-item {
+/* .project-list > .project-item {
   flex-basis: calc(100% / 3);
-}
+} */
 .titles {
   font-weight: 700;
   font-size: 18px;
@@ -273,4 +274,29 @@ a {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.project-list {
+  margin-top: 50px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.project-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 370px;
+}
+
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.project-item:nth-last-child(-n + 3) {
+  margi-bottom: 0;
 }
